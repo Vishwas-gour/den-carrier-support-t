@@ -306,7 +306,7 @@ export default function ContactCTA() {
                 delay: 0.3
               }}
             >
-              +91 73827 27507
+              +91 7387 563439
             </motion.div>
 
             <motion.a
