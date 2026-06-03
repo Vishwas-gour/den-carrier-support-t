@@ -31,10 +31,9 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link to="/" className="navbar-logo">
-          <div className="logo-box">DC</div>
+          <div className="logo-box">CT</div>
           <div className="logo-wordmark">
-            <span className="logo-name">Den
-              Carrier Support
+            <span className="logo-name">Cloudffusion technologies
             </span>
             <span className="logo-tag">IT Consulting</span>
           </div>

@@ -50,8 +50,8 @@ export default function Footer() {
             {/* Brand column */}
             <div className="footer-col footer-col--brand">
               <div className="footer-logo">
-                <div className="logo-box">DC</div>
-                <span className="logo-text">Den Carrier Support</span>
+                <div className="logo-box">CT</div>
+                <span className="logo-text">Cloudffusion technologies</span>
               </div>
               <p className="footer-tagline">
                 Empowering IT professionals with expert guidance,
