@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import "../../css/Hero.css";
+import Counter from "../../components/Counter.jsx";
 import {
   BriefcaseBusiness,
   HeadphonesIcon,
@@ -30,11 +31,16 @@ const TRUST_ITEMS = [
   { label: "Global Time Zones", Icon: Clock },
 ];
 
-
+const SUCCESS_METRICS = [
+  { end: 500, suffix: "+", label: "Professionals Guided" },
+  { end: 1000, suffix: "+", label: "Mock Interviews" },
+  { end: 50, suffix: "+", label: "Technologies Supported" },
+  { end: 95, suffix: "%", label: "Client Satisfaction" },
+];
 
 export default function Hero() {
   const counterRef = useRef(null);
-  const typingRef  = useRef(null);
+  const typingRef = useRef(null);
 
   /* ── Animated counter ── */
   useEffect(() => {
@@ -56,10 +62,10 @@ export default function Hero() {
     const el = typingRef.current;
     if (!el) return;
 
-    const words   = ["IT Career", "Your Future", "New Skills"];
+    const words = ["IT Career", "Your Future", "New Skills"];
     const TYPE_MS = 80;
-    const DEL_MS  = 45;
-    const PAUSE   = 1800;
+    const DEL_MS = 45;
+    const PAUSE = 1800;
 
     let wordIdx = 0, charIdx = 0, deleting = false;
     let raf;
@@ -80,7 +86,7 @@ export default function Hero() {
         el.textContent = word.slice(0, charIdx);
         if (charIdx === 0) {
           deleting = false;
-          wordIdx  = (wordIdx + 1) % words.length;
+          wordIdx = (wordIdx + 1) % words.length;
           raf = setTimeout(tick, 320);
           return;
         }
@@ -100,7 +106,7 @@ export default function Hero() {
   return (
     <section className="hero">
       <img src="" alt="" className="hero-bg" aria-hidden="true" />
-      <div className="hero-overlay"      aria-hidden="true" />
+      <div className="hero-overlay" aria-hidden="true" />
       <div className="hero-grid-overlay" aria-hidden="true" />
 
       <div className="hero-container">
@@ -162,7 +168,7 @@ export default function Hero() {
 
               <div className="hero-image-wrap">
                 <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80"
+                  src="https://images.openai.com/static-rsc-4/uXLcsi4Dm58OiHr60JCooib24L8NFqRWs-4g2iY1XZjefjEJWoRsA7fyvUcVY0iffErKpUwaedbTsAMXC3SfLJDxBpetKAacLdmGLodLGDBP6U8vFh0C2V9sU_eGALy5d0CWfgr_ovnv7nW60ehI3M-LZjuWRkyjEPwHFx_mqz0iG9d-V0BQNA3V2t4mXAcF?purpose=fullsize"
                   alt="IT professional in a consulting session"
                   className="hero-image"
                 />
@@ -201,6 +207,15 @@ export default function Hero() {
                   />
                 ))}
               </div>
+            </div>
+
+            <div className="hero-metrics">
+              {SUCCESS_METRICS.map((item) => (
+                <div className="hero-metric-card" key={item.label}>
+                  <Counter end={item.end} suffix={item.suffix} />
+                  <p>{item.label}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

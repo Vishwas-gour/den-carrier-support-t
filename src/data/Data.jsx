@@ -53,7 +53,7 @@ export const JOB_SUPPORT = [
     icon: <FaMicrophoneAlt />,
     iconColor: "#2563EB",
     bgColor: "#EFF6FF",
-    t: "Live Proxy Interview Help",
+    t: "Interview Prepration",
     d: "Real-time expert support during your interviews across all platforms."
   },
   {
@@ -67,7 +67,7 @@ export const JOB_SUPPORT = [
     icon: <MdVerifiedUser />,
     iconColor: "#16A34A",
     bgColor: "#DCFCE7",
-    t: "Online Exam Help (Certification)",
+    t: "Certification Preparation Support",
     d: "Get help for online certifications and proctored examinations."
   },
   {

@@ -49,10 +49,10 @@ export default function WhyUs() {
             </div>
 
             <h2 className="sec-h2">
-              We don't just train —
+              Job Support, Interview Guidance &
               <br />
               <span className="highlight-text">
-                we build careers.
+                Career Guidance for IT Professionals
               </span>
             </h2>
 

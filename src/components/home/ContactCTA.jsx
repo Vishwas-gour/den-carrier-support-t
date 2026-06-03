@@ -310,7 +310,7 @@ export default function ContactCTA() {
             </motion.div>
 
             <motion.a
-              href="https://wa.me/917382727507"
+              href="https://wa.me/917387563439"
               target="_blank"
               rel="noopener noreferrer"
               className="contact-wa-btn"
