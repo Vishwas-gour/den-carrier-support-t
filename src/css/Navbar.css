@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap');
+
+/* ══════════════════════════════════════════════
+   TOKENS
+══════════════════════════════════════════════ */
+:root {
+  --nb-navy:       #0B1C3D;
+  --nb-blue:       #1A5FD4;
+  --nb-blue-dim:   rgba(26, 95, 212, 0.08);
+  --nb-blue-glow:  rgba(26, 95, 212, 0.22);
+  --nb-ink:        #1E2D50;
+  --nb-muted:      #5A6A8A;
+  --nb-border:     rgba(13, 27, 62, 0.09);
+  --nb-border-md:  rgba(13, 27, 62, 0.14);
+  --nb-surface:    rgba(255, 255, 255, 0.88);
+  --nb-surface-solid: #ffffff;
+
+  --nb-h: 64px;
+  --nb-font-head: 'Syne', sans-serif;
+  --nb-font-body: 'DM Sans', sans-serif;
+  --nb-ease: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+/* ══════════════════════════════════════════════
+   OUTER SHELL — floats above page
+══════════════════════════════════════════════ */
+.navbar {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 12px 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  transition: padding 0.4s var(--nb-ease);
+}
+
+/* The pill */
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--nb-h);
+  padding: 0 6px 0 20px;
+  background: var(--nb-surface);
+  border: 1px solid var(--nb-border);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow:
+    0 1px 2px rgba(13, 27, 62, 0.04),
+    0 4px 16px rgba(13, 27, 62, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  transition:
+    background   0.35s var(--nb-ease),
+    border-color 0.35s var(--nb-ease),
+    box-shadow   0.35s var(--nb-ease),
+    border-radius 0.4s var(--nb-ease);
+}
+
+/* Scrolled state — full-width strip */
+.navbar-scrolled {
+  padding: 0 5%;
+}
+
+.navbar-scrolled .navbar-inner {
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.97);
+  border-color: var(--nb-border-md);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.9) inset,
+    0 8px 32px rgba(13, 27, 62, 0.09);
+}
+
+/* ══════════════════════════════════════════════
+   LOGO
+══════════════════════════════════════════════ */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo-box {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  background: var(--nb-blue);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--nb-font-head);
+  font-weight: 800;
+  font-size: 12.5px;
+  letter-spacing: 0.6px;
+  overflow: hidden;
+  transition: transform 0.25s var(--nb-ease), box-shadow 0.25s var(--nb-ease);
+  box-shadow: 0 2px 10px rgba(26, 95, 212, 0.35);
+}
+
+/* Sheen overlay */
+.logo-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.22) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Corner sparkle */
+.logo-box::after {
+  content: '';
+  position: absolute;
+  top: -4px; right: -4px;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+}
+
+.navbar-logo:hover .logo-box {
+  transform: scale(1.08) rotate(-2deg);
+  box-shadow: 0 6px 20px rgba(26, 95, 212, 0.45);
+}
+
+.logo-wordmark {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  gap: 1px;
+}
+
+.logo-name {
+  font-family: var(--nb-font-head);
+  font-size: 16.5px;
+  font-weight: 700;
+  color: var(--nb-navy);
+  letter-spacing: -0.4px;
+}
+
+.logo-tag {
+  font-family: var(--nb-font-body);
+  font-size: 9.5px;
+  font-weight: 400;
+  color: var(--nb-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ══════════════════════════════════════════════
+   NAV LINKS — centered
+══════════════════════════════════════════════ */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar-links a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-family: var(--nb-font-body);
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--nb-muted);
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease, background 0.2s ease;
+  white-space: nowrap;
+}
+
+/* Animated dot indicator */
+.navbar-links a::before {
+  content: '';
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--nb-blue);
+  transition: transform 0.2s var(--nb-ease), opacity 0.2s ease;
+  opacity: 0;
+}
+
+.navbar-links a:hover {
+  color: var(--nb-ink);
+  background: rgba(13, 27, 62, 0.05);
+}
+
+.navbar-links a:hover::before {
+  transform: translateX(-50%) scale(1);
+  opacity: 1;
+}
+
+.navbar-links a.active {
+  color: var(--nb-blue);
+  background: var(--nb-blue-dim);
+  font-weight: 500;
+}
+
+.navbar-links a.active::before {
+  transform: translateX(-50%) scale(1);
+  opacity: 1;
+}
+
+/* ══════════════════════════════════════════════
+   RIGHT — CTA ACTIONS
+══════════════════════════════════════════════ */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+/* Divider before actions */
+.navbar-actions::before {
+  content: '';
+  width: 1px;
+  height: 22px;
+  background: var(--nb-border-md);
+  margin-right: 4px;
+}
+
+/* Ghost / outline button */
+.btn-o {
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--nb-border-md);
+  background: transparent;
+  color: var(--nb-ink);
+  font-family: var(--nb-font-body);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-o:hover {
+  border-color: var(--nb-blue);
+  color: var(--nb-blue);
+  background: var(--nb-blue-dim);
+}
+
+/* Primary CTA */
+.btn-blue {
+  padding: 9px 20px;
+  border-radius: 11px;
+  border: none;
+  background: var(--nb-blue);
+  color: #fff;
+  font-family: var(--nb-font-body);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.18s var(--nb-ease), box-shadow 0.22s ease;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.18), 0 4px 14px var(--nb-blue-glow);
+}
+
+/* Top-edge sheen */
+.btn-blue::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.16), transparent);
+  pointer-events: none;
+}
+
+/* Sweep shimmer on hover */
+.btn-blue::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -120%;
+  width: 60%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.5s ease;
+}
+
+.btn-blue:hover::after { left: 160%; }
+
+.btn-blue:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 0 rgba(0,0,0,0.18), 0 8px 24px rgba(26,95,212,0.38);
+}
+
+.btn-blue:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.14), 0 2px 8px var(--nb-blue-glow);
+}
+
+/* ══════════════════════════════════════════════
+   HAMBURGER
+══════════════════════════════════════════════ */
+.menu-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: 1px solid var(--nb-border-md);
+  border-radius: 11px;
+  cursor: pointer;
+  padding: 10px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.menu-btn:hover {
+  background: rgba(13, 27, 62, 0.05);
+  border-color: rgba(13, 27, 62, 0.25);
+}
+
+/* Animated bars */
+.menu-btn .bar {
+  display: block;
+  width: 18px;
+  height: 1.5px;
+  border-radius: 2px;
+  background: var(--nb-ink);
+  transition: transform 0.3s var(--nb-ease), opacity 0.2s ease, width 0.3s ease;
+  transform-origin: center;
+}
+
+.menu-btn.open .bar:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.menu-btn.open .bar:nth-child(2) { opacity: 0; width: 0; }
+.menu-btn.open .bar:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* ══════════════════════════════════════════════
+   MOBILE MENU DRAWER
+══════════════════════════════════════════════ */
+.mobile-menu {
+  margin-top: 8px;
+  background: var(--nb-surface-solid);
+  border: 1px solid var(--nb-border);
+  border-radius: 18px;
+  padding: 10px 10px 12px;
+  display: none;
+  flex-direction: column;
+  gap: 2px;
+  box-shadow: 0 8px 32px rgba(13, 27, 62, 0.10);
+  animation: drawerIn 0.28s var(--nb-ease) both;
+  overflow: hidden;
+}
+
+@keyframes drawerIn {
+  from { opacity: 0; transform: translateY(-10px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.mobile-menu a {
+  display: flex;
+  align-items: center;
+  padding: 11px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-family: var(--nb-font-body);
+  color: var(--nb-ink);
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.15s ease, color 0.15s ease;
+  letter-spacing: 0.01em;
+}
+
+.mobile-menu a:hover {
+  background: var(--nb-blue-dim);
+  color: var(--nb-blue);
+}
+
+.mobile-divider {
+  height: 1px;
+  background: var(--nb-border);
+  margin: 6px 0;
+}
+
+.mobile-menu .btn-blue {
+  margin-top: 4px;
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════ */
+@media (max-width: 960px) {
+  .navbar-links { display: none; }
+}
+
+@media (max-width: 800px) {
+  .navbar-actions { display: none; }
+  .menu-btn { display: flex; }
+  .mobile-menu { display: flex; }
+}
+
+@media (max-width: 480px) {
+  .navbar { padding: 10px 4%; }
+  .navbar-scrolled { padding: 0 4%; }
+}

@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* =========================================
+   SECTION
+========================================= */
+
+.trust-badges-section{
+    background:#F8FAFC;
+    padding:90px 5%;
+    font-family:'Inter',sans-serif;
+}
+
+.trust-badges-header{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 60px;
+}
+
+/* =========================================
+   GRID
+========================================= */
+
+.trust-badges-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.trust-badge-card{
+    position:relative;
+    overflow:hidden;
+
+    background:rgba(255,255,255,0.92);
+
+    backdrop-filter:blur(14px);
+
+    border:1px solid rgba(226,232,240,.9);
+
+    border-radius:22px;
+
+    padding:32px 24px;
+
+    text-align:center;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+
+    z-index:1;
+}
+
+.trust-badge-card:hover{
+    border-color:#93C5FD;
+
+    box-shadow:
+        0 20px 40px rgba(37,99,235,.08),
+        0 8px 20px rgba(15,23,42,.06);
+}
+
+/* =========================================
+   ICON
+========================================= */
+
+.trust-badge-icon{
+    width:72px;
+    height:72px;
+
+    margin:0 auto 20px;
+
+    border-radius:20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #EFF6FF,
+            #DBEAFE
+        );
+
+    color:#2563EB;
+
+    font-size:30px;
+
+    transition:all .35s ease;
+
+    box-shadow:
+        0 10px 25px rgba(37,99,235,.12);
+}
+/* =========================================
+   TITLE
+========================================= */
+
+.trust-badge-title{
+    font-size:20px;
+    font-weight:700;
+
+    color:#0F172A;
+
+    margin-bottom:12px;
+
+    line-height:1.4;
+}
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.trust-badge-desc{
+    font-size:15px;
+    line-height:1.8;
+
+    color:#64748B;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:1100px){
+
+    .trust-badges-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:768px){
+
+    .trust-badges-section{
+        padding:70px 5%;
+    }
+}
+
+@media(max-width:576px){
+
+    .trust-badges-grid{
+        grid-template-columns:1fr;
+    }
+
+    .trust-badge-card{
+        padding:24px 18px;
+    }
+
+    .trust-badge-title{
+        font-size:16px;
+    }
+
+    .trust-badge-desc{
+        font-size:13px;
+    }
+}
+.trust-badges-subtitle{
+    max-width:700px;
+    margin:16px auto 0;
+
+    color:#64748B;
+
+    font-size:16px;
+    line-height:1.8;
+}
+
+.trust-badge-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.trust-badge-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:4px;
+    background:linear-gradient(
+        90deg,
+        #2563EB,
+        #60A5FA
+    );
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:0.3s ease;
+}
+
+.trust-badge-card:hover::before{
+    transform:scaleX(1);
+}
+
+.trust-badge-card:hover .trust-badge-icon{
+    transform:scale(1.1);
+}
+
+.trust-badge-icon{
+    transition:all .3s ease;
+}
+.trust-badge-card::after{
+    content:"";
+
+    position:absolute;
+
+    inset:-100px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(96,165,250,.15),
+            transparent 70%
+        );
+
+    opacity:0;
+
+    transition:.4s ease;
+
+    z-index:-1;
+}
+
+.trust-badge-card:hover::after{
+    opacity:1;
+}
+.trust-badges-section{
+    position:relative;
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            #FFFFFF 0%,
+            #F8FAFC 100%
+        );
+
+    padding:100px 5%;
+}

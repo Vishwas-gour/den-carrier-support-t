@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* =========================================
+   SECTION
+========================================= */
+
+.job-support-section{
+    background:#F8FAFC;
+    padding:90px 5%;
+    font-family:'Inter',sans-serif;
+}
+
+.job-support-grid{
+    display:flex;
+    flex-direction:column;
+    gap:80px;
+}
+
+/* =========================================
+   COMMON SECTION ELEMENTS
+========================================= */
+
+.sec-label{
+    display:inline-flex;
+    align-items:center;
+
+    padding:7px 16px;
+
+    background:#DBEAFE;
+    color:#1E3A8A;
+
+    border-radius:999px;
+
+    font-size:12px;
+    font-weight:600;
+
+    text-transform:uppercase;
+    letter-spacing:.05em;
+
+    margin-bottom:18px;
+}
+
+.sec-h2{
+    font-size:42px;
+    font-weight:800;
+    line-height:1.2;
+    color:#0F172A;
+    margin-bottom:16px;
+}
+
+.job-support-desc{
+    font-size:16px;
+    color:#64748B;
+    line-height:1.8;
+    margin-bottom:32px;
+}
+
+/* =========================================
+   JOB SUPPORT
+========================================= */
+
+.job-support-list{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+.job-support-card{
+    display:flex;
+    align-items:flex-start;
+    gap:16px;
+
+    background:#FFFFFF;
+
+    border:1px solid #E2E8F0;
+    border-radius:16px;
+
+    padding:22px;
+
+    transition:
+      transform .25s ease,
+      box-shadow .25s ease,
+      border-color .25s ease;
+}
+
+.job-support-card:hover{
+    transform:translateY(-4px);
+
+    border-color:#CBD5E1;
+
+    box-shadow:
+      0 12px 30px rgba(15,23,42,.08);
+}
+
+.job-support-icon{
+    width:52px;
+    height:52px;
+
+    border-radius:14px;
+
+    background:#EFF6FF;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:22px;
+
+    color:#2563EB;
+
+    flex-shrink:0;
+}
+
+.job-support-card h4{
+    font-size:17px;
+    font-weight:700;
+    color:#0F172A;
+    margin-bottom:6px;
+}
+
+.job-support-card p{
+    font-size:14px;
+    color:#64748B;
+    line-height:1.7;
+    margin:0;
+}
+
+.job-support-footer{
+    margin-top:24px;
+
+    background:#1E3A8A;
+    color:#FFFFFF;
+
+    border-radius:14px;
+
+    text-align:center;
+
+    padding:16px 20px;
+
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:.05em;
+}
+
+.job-support-tags{
+    display:flex;
+    justify-content:center;
+    gap:16px;
+    flex-wrap:wrap;
+
+    margin-top:18px;
+}
+
+.job-support-tags span{
+    background:#FFFFFF;
+
+    border:1px solid #E2E8F0;
+
+    border-radius:999px;
+
+    padding:8px 14px;
+
+    font-size:13px;
+    color:#475569;
+}
+
+/* =========================================
+   TRAINING SIDE
+========================================= */
+
+.training-highlight{
+    background:#DBEAFE;
+
+    border:1px solid #BFDBFE;
+
+    border-radius:16px;
+
+    padding:20px;
+
+    margin-bottom:24px;
+}
+
+.training-highlight h3{
+    margin:0;
+
+    color:#1E3A8A;
+
+    font-size:22px;
+    font-weight:700;
+}
+
+.training-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+}
+
+.training-card{
+    background:#FFFFFF;
+
+    border:1px solid #E2E8F0;
+    border-radius:16px;
+
+    padding:20px;
+
+    transition:
+      transform .25s ease,
+      box-shadow .25s ease,
+      border-color .25s ease;
+}
+
+.training-card:hover{
+    transform:translateY(-4px);
+
+    border-color:#CBD5E1;
+
+    box-shadow:
+      0 12px 30px rgba(15,23,42,.08);
+}
+
+.training-icon{
+    width:48px;
+    height:48px;
+
+    border-radius:12px;
+
+    background:#EFF6FF;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:20px;
+
+    color:#2563EB;
+
+    margin-bottom:14px;
+}
+
+.training-card h4{
+    font-size:15px;
+    font-weight:700;
+    color:#0F172A;
+    margin-bottom:8px;
+}
+
+.accent-title{
+    color:#2563EB !important;
+}
+
+.training-card p{
+    font-size:13px;
+    line-height:1.7;
+    color:#64748B;
+    margin:0;
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.training-btn{
+    width:100%;
+    margin-top:24px;
+
+    background:#2563EB;
+    color:#FFFFFF;
+
+    border:none;
+    border-radius:12px;
+
+    padding:15px 24px;
+
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:background .25s ease;
+}
+
+.training-btn:hover{
+    background:#1D4ED8;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width:992px){
+
+    .job-support-grid{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .sec-h2{
+        font-size:34px;
+    }
+      .training-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media (max-width:768px){
+
+    .job-support-section{
+        padding:70px 5%;
+    }
+
+    .training-grid{
+        grid-template-columns:1fr;
+    }
+
+    .sec-h2{
+        font-size:30px;
+    }
+        .training-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media (max-width:480px){
+
+    .sec-h2{
+        font-size:26px;
+    }
+
+    .job-support-card,
+    .training-card{
+        padding:18px;
+    }
+
+    .job-support-tags{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+
+.job-support-icon{
+    width:56px;
+    height:56px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:24px;
+
+    background:#F8FAFC;
+    border:1px solid #E2E8F0;
+    border-radius:14px;
+
+    flex-shrink:0;
+}
+
+/* =========================================
+   SCROLL REVEAL ANIMATIONS
+========================================= */
+
+.col-enter{
+    opacity:0;
+    transform:translateY(60px);
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.col-enter.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* Cards */
+
+.job-support-card,
+.training-card{
+    opacity:0;
+    transform:translateY(40px);
+}
+
+.job-support-card.visible,
+.training-card.visible{
+    opacity:1;
+    transform:translateY(0);
+    transition:
+        opacity .6s ease,
+        transform .6s ease;
+}
+
+/* Label */
+
+.sec-label{
+    animation:slideDown .8s ease;
+}
+
+@keyframes slideDown{
+    from{
+        opacity:0;
+        transform:translateY(-15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Heading Gradient Animation */
+
+.grad{
+    background:linear-gradient(
+        90deg,
+        #2563EB,
+        #3B82F6,
+        #60A5FA,
+        #2563EB
+    );
+
+    background-size:300% auto;
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:gradientMove 4s linear infinite;
+}
+
+@keyframes gradientMove{
+    0%{
+        background-position:0% center;
+    }
+    100%{
+        background-position:300% center;
+    }
+}
+
+/* Floating Icons */
+
+.job-support-icon,
+.training-icon{
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.job-support-card:hover .job-support-icon,
+.training-card:hover .training-icon{
+    transform:
+        translateY(-4px)
+        scale(1.08)
+        rotate(5deg);
+
+    box-shadow:
+        0 10px 20px rgba(37,99,235,.18);
+}
+
+/* Training Highlight Pulse */
+
+.training-highlight{
+    position:relative;
+    overflow:hidden;
+}
+
+.training-highlight::before{
+    content:"";
+
+    position:absolute;
+    top:0;
+    left:-100%;
+
+    width:100%;
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.6),
+        transparent
+    );
+
+    animation:shine 3s infinite;
+}
+
+@keyframes shine{
+    100%{
+        left:120%;
+    }
+}
+
+/* CTA Button Animation */
+
+.training-btn{
+    position:relative;
+    overflow:hidden;
+}
+
+.training-btn::before{
+    content:"";
+
+    position:absolute;
+    top:0;
+    left:-100%;
+
+    width:100%;
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.25),
+        transparent
+    );
+
+    transition:.6s;
+}
+
+.training-btn:hover::before{
+    left:100%;
+}
+
+.training-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:
+        0 12px 30px rgba(37,99,235,.25);
+}
