@@ -141,7 +141,10 @@
   color: var(--nb-navy);
   letter-spacing: -0.4px;
 }
-
+.logo-name img{
+  height: 100px;
+  margin-top: 15px;
+}
 .logo-tag {
   font-family: var(--nb-font-body);
   font-size: 9.5px;

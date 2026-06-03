@@ -1,6 +1,7 @@
 import "../css/Navbar.css";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+import logo from "../assets/logo.png";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -31,11 +32,11 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link to="/" className="navbar-logo">
-          <div className="logo-box">CT</div>
+         
           <div className="logo-wordmark">
-            <span className="logo-name">Cloudffusion technologies
+            <span className="logo-name"><img src={logo} alt="" />
             </span>
-            <span className="logo-tag">IT Consulting</span>
+            <span className="logo-tag"></span>
           </div>
         </Link>
 
