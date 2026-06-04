@@ -13,16 +13,21 @@ import {
     FaRobot,
 } from "react-icons/fa";
 
-// slug: "salesforce-job-support",
-// slug: "aws-job-support",
-// slug: "  devops-job-support"
-// slug: "data-engineer-job-support",
+// slug: "java-job-support",
+// slug: "dotnet-job-support"
 // slug: "qa-job-support",
-// slug: "power-bi-training",
+// slug: "devops-job-support"
+// slug: "aws-job-support",
+// slug: "azure-job-support",
+// slug: "salesforce-job-support",
 // slug: "resume-services",
+// slug: "data-engineer-job-support",
+// slug: "data-science-job-support",l̥
+// slug: "mulesoft-job-support",
+// slug: "power-bi-training",
 
 //
-        
+
 export const SERVICES_PAGE_DATA = [
     {
         slug: "salesforce-job-support",
@@ -175,6 +180,145 @@ export const SERVICES_PAGE_DATA = [
         ],
         benefits: ["Better ATS score", "Professional formatting", "Recruiter visibility", "Career growth"],
     },
+    {
+        slug: "java-job-support",
+
+        title: "Java Job Support",
+        badge: "Backend Expert",
+        description:
+            "Get hands-on Java project support from experienced professionals. Solve real-world challenges in backend development, microservices, APIs, and enterprise applications with confidence.",
+        technologies: ["Java", "Spring Boot", "Spring Security", "Hibernate", "JPA", "Microservices", "REST APIs", "MySQL"],
+        support: [
+            { title: "Live Project Support", desc: "Receive real-time assistance with Java development tasks, debugging, and project deliverables." },
+            { title: "Spring Boot Guidance", desc: "Expert help in building scalable REST APIs, authentication systems, and enterprise applications." },
+            { title: "Code Review", desc: "Improve code quality, performance, and maintainability through professional reviews." },
+            { title: "Production Issue Resolution", desc: "Quick diagnosis and fixes for bugs, exceptions, and performance bottlenecks." },
+            { title: "Interview Preparation", desc: "Prepare for Java developer interviews with mock sessions and practical questions." },
+        ],
+        audience: [
+            { label: "Java Developers", icon: <FaLaptopCode /> },
+            { label: "Working Professionals", icon: <FaUserTie /> },
+            { label: "Freshers", icon: <FaGraduationCap /> },
+            { label: "Career Switchers", icon: <FaExchangeAlt /> },
+        ],
+        benefits: ["One-on-one mentoring", "Project assistance", "Flexible schedules", "Interview support"],
+    },
+    {
+        slug: "dotnet-job-support",
+
+        title: ".NET Job Support",
+        badge: "Enterprise Expert",
+        description:
+            "Professional .NET project support for developers working on enterprise applications. Get expert assistance with ASP.NET Core, Web APIs, microservices, cloud deployments, and production issues.",
+        technologies: ["C#", "ASP.NET Core", "Web API", "Entity Framework", "SQL Server", "Microservices", "Azure", "MVC"],
+        support: [
+            { title: "Live Project Assistance", desc: "Get real-time guidance on daily development tasks, project requirements, and complex implementations." },
+            { title: "Application Development", desc: "Build scalable web applications, REST APIs, and enterprise solutions using modern .NET technologies." },
+            { title: "Code Review", desc: "Improve application quality, security, and maintainability through expert code reviews." },
+            { title: "Production Support", desc: "Resolve application errors, performance issues, and deployment challenges quickly." },
+            { title: "Interview Preparation", desc: "Prepare for .NET developer interviews with practical scenarios and mock interview sessions." },
+        ],
+        audience: [
+            { label: "Dot Net Developers", icon: <FaLaptopCode /> },
+            { label: "Software Engineers", icon: <FaUserTie /> },
+            { label: "Freshers", icon: <FaGraduationCap /> },
+            { label: "Career Switchers", icon: <FaExchangeAlt /> },
+        ],
+        benefits: ["Enterprise expertise", "Project guidance", "Flexible timings", "Interview support"],
+    },
+    {
+        slug: "azure-job-support",
+
+        title: "Azure Job Support",
+        badge: "Cloud Expert",
+        description:
+            "Get expert Azure project support for cloud infrastructure, application deployment, security, and DevOps. Work confidently on real-time projects with guidance from experienced Azure professionals.",
+        technologies: ["Azure Virtual Machines", "Azure App Service", "Azure Functions", "Azure DevOps", "Azure SQL", "Azure Storage", "Azure Kubernetes Service", "Azure Active Directory"],
+        support: [
+            { title: "Cloud Infrastructure Support", desc: "Design, deploy, and manage scalable Azure cloud environments with expert assistance." },
+            { title: "Application Deployment", desc: "Deploy web applications, APIs, and microservices using Azure services and best practices." },
+            { title: "Security & Identity Management", desc: "Configure Azure AD, RBAC, networking, and security controls for enterprise-grade protection." },
+            { title: "DevOps & Automation", desc: "Implement CI/CD pipelines, infrastructure automation, and monitoring using Azure DevOps." },
+            { title: "Production Issue Resolution", desc: "Quick troubleshooting for outages, performance bottlenecks, and deployment failures." },
+        ],
+        audience: [
+            { label: "Cloud Engineers", icon: <FaCloud /> },
+            { label: "DevOps Engineers", icon: <FaCog /> },
+            { label: "Developers", icon: <FaLaptopCode /> },
+            { label: "System Administrators", icon: <FaServer /> },
+        ],
+        benefits: ["Certified Azure experts", "Hands-on support", "Flexible schedules", "Real-time project guidance"],
+    },
+    {
+        slug: "mulesoft-job-support",
+
+        title: "MuleSoft Job Support",
+        badge: "Integration Expert",
+        description:
+            "Get real-time MuleSoft project support from experienced integration professionals. Master API-led connectivity, system integrations, and enterprise deployments with expert guidance.",
+        technologies: ["Mule 4", "Anypoint Studio", "API Manager", "DataWeave", "RAML", "REST APIs", "SOAP Services", "CloudHub"],
+        support: [
+            { title: "Live Project Support", desc: "Receive hands-on assistance with daily MuleSoft development tasks, integrations, and client deliverables." },
+            { title: "API Development", desc: "Design, build, secure, and manage APIs using MuleSoft best practices and API-led architecture." },
+            { title: "Integration Assistance", desc: "Connect Salesforce, SAP, databases, cloud applications, and third-party systems efficiently." },
+            { title: "Deployment Support", desc: "Get help with CloudHub deployments, environment management, and release processes." },
+            { title: "Production Issue Resolution", desc: "Quick troubleshooting of integration failures, API errors, and performance bottlenecks." },
+        ],
+        audience: [
+            { label: "Integration Developers", icon: <FaLaptopCode /> },
+            { label: "MuleSoft Professionals", icon: <FaUserTie /> },
+            { label: "API Developers", icon: <FaExchangeAlt /> },
+            { label: "Working Professionals", icon: <FaBriefcase /> },
+        ],
+        benefits: ["Expert mentoring", "Real-time project support", "Flexible schedules", "Interview preparation"],
+    },
+    {
+        slug: "data-science-job-support",
+
+        title: "Data Science Job Support",
+        badge: "Analytics Expert",
+        description:
+            "Get expert Data Science project support for analytics, predictive modeling, machine learning, and business insights. Work on real-world datasets and solve complex data challenges with experienced professionals.",
+        technologies: ["Python", "Pandas", "NumPy", "Scikit-learn", "TensorFlow", "SQL", "Jupyter", "Data Visualization"],
+        support: [
+            { title: "Live Project Support", desc: "Receive real-time assistance on data science projects, model development, and business analytics tasks." },
+            { title: "Data Analysis & Visualization", desc: "Clean, analyze, and visualize data using industry-standard tools and techniques." },
+            { title: "Predictive Modeling", desc: "Build and optimize machine learning models for classification, regression, and forecasting problems." },
+            { title: "Production Issue Resolution", desc: "Troubleshoot model performance, data quality issues, and deployment challenges effectively." },
+            { title: "Interview Preparation", desc: "Prepare for Data Science interviews with practical case studies, coding exercises, and mock interviews." },
+        ],
+        audience: [
+            { label: "Data Scientists", icon: <FaChartBar /> },
+            { label: "Data Analysts", icon: <FaUserTie /> },
+            { label: "Working Professionals", icon: <FaBriefcase /> },
+            { label: "Career Switchers", icon: <FaExchangeAlt /> },
+        ],
+        benefits: ["Industry experts", "Hands-on project guidance", "Flexible schedules", "Career support"],
+    },
+    {
+    slug: "machine-learning-job-support",
+
+    title: "Machine Learning Job Support",
+    badge: "AI Expert",
+    description:
+        "Get professional Machine Learning project support from experienced AI engineers. Build, train, optimize, and deploy ML models with confidence while working on real-world business use cases.",
+    technologies: ["Python", "Scikit-learn", "TensorFlow", "PyTorch", "XGBoost", "MLflow", "MLOps", "Model Deployment"],
+    support: [
+        { title: "Live Project Support", desc: "Receive real-time assistance on machine learning projects, model development, and production deployments." },
+        { title: "Model Building & Training", desc: "Design, train, evaluate, and optimize machine learning models for business and research applications." },
+        { title: "MLOps & Deployment", desc: "Deploy and monitor ML models using modern MLOps practices, CI/CD pipelines, and cloud platforms." },
+        { title: "Performance Optimization", desc: "Improve model accuracy, reduce training time, and solve issues related to overfitting and underfitting." },
+        { title: "Interview Preparation", desc: "Prepare for Machine Learning and AI interviews with practical exercises, coding rounds, and case studies." },
+    ],
+    audience: [
+        { label: "Machine Learning Engineers", icon: <FaRobot /> },
+        { label: "Data Scientists", icon: <FaChartBar /> },
+        { label: "AI Professionals", icon: <FaUserTie /> },
+        { label: "Career Switchers", icon: <FaExchangeAlt /> },
+    ],
+    benefits: ["AI expert mentoring", "Real-world project support", "Flexible schedules", "Career growth assistance"],
+    },
+
 ];
 
 
