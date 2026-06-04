@@ -142,8 +142,10 @@
   letter-spacing: -0.4px;
 }
 .logo-name img{
-  height: 100px;
+  height: 55px;
   margin-top: 15px;
+  position: relative;
+  top: -4px;
 }
 .logo-tag {
   font-family: var(--nb-font-body);

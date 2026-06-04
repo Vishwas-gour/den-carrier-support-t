@@ -4,59 +4,17 @@ import { motion } from "framer-motion";
 import {
   FiCalendar,
   FiBriefcase,
-  FiZap,
-  FiShield,
-  FiGlobe,
   FiClock,
   FiMessageCircle,
 } from "react-icons/fi";
 
 import { FaWhatsapp } from "react-icons/fa";
 
-const ENGAGEMENT_MODELS = [
-  "Hourly",
-  "Part-time",
-  "Full-time",
-  "Project-based"
-];
-
-const TRUST_BADGES = [
-  {
-    icon: <FiZap />,
-    label: "Quick Response"
-  },
-  {
-    icon: <FiShield />,
-    label: "Trusted Support"
-  },
-  {
-    icon: <FiGlobe />,
-    label: "Global Reach"
-  }
-];
-
-const fadeUp = {
-  hidden: {
-    opacity: 0,
-    y: 50
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.7
-    }
-  }
-};
-
-const stagger = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.12
-    }
-  }
-};
+import {
+  SERVICE_TRUST_BADGES,
+  fadeUp,
+  stagger, ENGAGEMENT_MODELS
+} from "../../data/Data"
 
 export default function ContactCTA() {
   return (
@@ -219,7 +177,7 @@ export default function ContactCTA() {
               className="trust-badges"
               variants={stagger}
             >
-              {TRUST_BADGES.map((badge) => (
+              {SERVICE_TRUST_BADGES.map((badge) => (
                 <motion.div
                   key={badge.label}
                   className="trust-badge"

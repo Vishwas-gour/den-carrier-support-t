@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import logo from "../assets/logo.png";
 
 export default function Navbar() {
+  
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
@@ -17,11 +18,11 @@ export default function Navbar() {
   useEffect(() => setMenuOpen(false), [location]);
 
   const links = [
-    { href: "#services", label: "Services" },
-    { href: "#job-support", label: "Job Support" },
-    { href: "#how-it-works", label: "Process" },
-    { href: "#why-us", label: "Why Us" },
-    { href: "#contact", label: "Contact" },
+    { href: "/#services", label: "Services" },
+    { href: "/#job-support", label: "Job Support" },
+    { href: "/#how-it-works", label: "Process" },
+    { href: "/#why-us", label: "Why Us" },
+    { href: "/#contact", label: "Contact" },
   ];
 
   return (

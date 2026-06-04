@@ -9,13 +9,15 @@ import {
   FiArrowUpRight,
   FiShield,
 } from "react-icons/fi";
+import logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
 
 const QUICK_LINKS = [
-  { href: "#services",     label: "Services"     },
-  { href: "#job-support",  label: "Job Support"  },
-  { href: "#how-it-works", label: "Process"      },
-  { href: "#why-us",       label: "Why Us"       },
-  { href: "#contact",      label: "Contact"      },
+  { href: "#services", label: "Services" },
+  { href: "#job-support", label: "Job Support" },
+  { href: "#how-it-works", label: "Process" },
+  { href: "#why-us", label: "Why Us" },
+  { href: "#contact", label: "Contact" },
 ];
 
 const SERVICES = [
@@ -27,15 +29,15 @@ const SERVICES = [
 ];
 
 const SOCIALS = [
-  { icon: <FiLinkedin />,  href: "#", label: "LinkedIn"  },
-  { icon: <FiTwitter />,   href: "#", label: "Twitter"   },
+  { icon: <FiLinkedin />, href: "#", label: "LinkedIn" },
+  { icon: <FiTwitter />, href: "#", label: "Twitter" },
   { icon: <FiInstagram />, href: "#", label: "Instagram" },
 ];
 
 const LEGAL_LINKS = [
-  { href: "#", label: "Privacy Policy"  },
-  { href: "#", label: "Terms of Use"    },
-  { href: "#", label: "Cookie Policy"   },
+  { href: "#", label: "Privacy Policy" },
+  { href: "#", label: "Terms of Use" },
+  { href: "#", label: "Cookie Policy" },
 ];
 
 export default function Footer() {
@@ -49,10 +51,15 @@ export default function Footer() {
 
             {/* Brand column */}
             <div className="footer-col footer-col--brand">
-              <div className="footer-logo">
-                <div className="logo-box">CT</div>
-                <span className="logo-text">Cloudffusion technologies</span>
-              </div>
+              {/* Logo */}
+              <Link to="/" className="footer-logo">
+                <div className="logo-wordmark">
+                  <span className="logo-name"><img src={logo} alt="" />
+                  </span>
+                  <span className="logo-tag"></span>
+                </div>
+              </Link>
+
               <p className="footer-tagline">
                 Empowering IT professionals with expert guidance,
                 career support, and real-world readiness across global markets.
@@ -109,15 +116,18 @@ export default function Footer() {
               <ul className="footer-contact-list">
                 <li>
                   <FiPhone className="footer-contact-icon" aria-hidden="true" />
-                  <a href="tel:+917387563439">+91 73875-63439</a>
+                  <a href="tel:+917387563439">+91 73875-63439, <br />+91 62606 77238 </a>
+
                 </li>
                 <li>
                   <FiMail className="footer-contact-icon" aria-hidden="true" />
-                  <a href="mailto:hello@talentstack.io">hello@talentstack.io</a>
+                  <a href="mailto:Technicalstudies343@gmail.com">Technicalstudies343@gmail.com</a>
                 </li>
                 <li>
                   <FiMapPin className="footer-contact-icon" aria-hidden="true" />
-                  <span>India &amp; Worldwide</span>
+                  <span>Cloudffusion Technologies
+                    Mumbai, Maharashtra, India
+                    Remote Consulting & Training Services</span>
                 </li>
               </ul>
             </div>

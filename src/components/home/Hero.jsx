@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import "../../css/Hero.css";
 import Counter from "../../components/Counter.jsx";
+import { SUCCESS_METRICS } from "../../data/Data.jsx";
 import {
   BriefcaseBusiness,
   HeadphonesIcon,
@@ -31,12 +32,7 @@ const TRUST_ITEMS = [
   { label: "Global Time Zones", Icon: Clock },
 ];
 
-const SUCCESS_METRICS = [
-  { end: 500, suffix: "+", label: "Professionals Guided" },
-  { end: 1000, suffix: "+", label: "Mock Interviews" },
-  { end: 50, suffix: "+", label: "Technologies Supported" },
-  { end: 95, suffix: "%", label: "Client Satisfaction" },
-];
+
 
 export default function Hero() {
   const counterRef = useRef(null);

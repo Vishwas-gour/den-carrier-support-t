@@ -1,3 +1,4 @@
+import { BookOpen, Star, Users, Zap } from "lucide-react";
 import {
   FaMicrophoneAlt,
   FaLaptopCode,
@@ -14,23 +15,20 @@ import {
   FaCompass,
   FaUserFriends,
   FaAward,
-
-  FaClock,
-  FaLock, FaThumbsUp,
-  FaShieldAlt
-} from "react-icons/fa";
-import {
-
-} from "react-icons/fa";
-import {
   FaCode,
   FaCloud,
   FaDatabase,
   FaBrain,
   FaCheckCircle,
   FaBuilding,
-  FaMobileAlt
+  FaMobileAlt,
+  FaClock,
+  FaLock, FaThumbsUp,
+  FaShieldAlt
 } from "react-icons/fa";
+
+
+import { FiGlobe, FiShield, FiZap } from "react-icons/fi";
 
 import { MdVerifiedUser } from "react-icons/md";
 export const TECHS = [
@@ -319,33 +317,7 @@ export const TECH_DOMAINS = [
 ];
 
 
-export const TRUST_BADGES = [
-  {
-    icon: FaShieldAlt,
-    t: "Reliable Support",
-    d: "Dedicated guidance from experienced professionals whenever you need assistance."
-  },
-  {
-    icon: FaAward,
-    t: "Quality Service",
-    d: "High standards, practical expertise, and consistent support for every engagement."
-  },
-  {
-    icon: FaClock,
-    t: "Flexible Engagement",
-    d: "Choose hourly, part-time, or full-time support based on your requirements."
-  },
-  {
-    icon: FaLock,
-    t: "100% Confidential",
-    d: "Your information, projects, and discussions remain private and secure."
-  },
-  {
-    icon: FaThumbsUp,
-    t: "Client Satisfaction",
-    d: "Focused on delivering value, measurable outcomes, and long-term success."
-  }
-];
+
 
 export const GLOBAL = [
   { flag: "🇺🇸", label: "USA" },
@@ -379,3 +351,85 @@ export const TESTIMONIALS = [
     q: "Professional guidance, quick responses, and real-world expertise. Highly recommended for career growth."
   }
 ];
+
+
+
+export const SUCCESS_METRICS = [
+  { end: 500, suffix: "+", label: "Professionals Guided", "icon": < Users size={22} /> },
+  { end: 1000, suffix: "+", label: "Mock Interviews", "icon": <BookOpen size={22} /> },
+  { end: 50, suffix: "+", label: "Technologies Supported", "icon": <Zap size={22} /> },
+  { end: 95, suffix: "%", label: "Client Satisfaction", "icon": <Star size={22} /> },
+];
+
+
+export const ENGAGEMENT_MODELS = [
+  "Hourly",
+  "Part-time",
+  "Full-time",
+  "Project-based"
+];
+// ===============================
+export const SERVICE_TRUST_BADGES = [
+  {
+    icon: <FiZap />,
+    label: "Quick Response"
+  },
+  {
+    icon: <FiShield />,
+    label: "Trusted Support"
+  },
+  {
+    icon: <FiGlobe />,
+    label: "Global Reach"
+  }
+];
+export const TRUST_BADGES = [
+  {
+    icon: FaShieldAlt,
+    t: "Reliable Support",
+    d: "Dedicated guidance from experienced professionals whenever you need assistance."
+  },
+  {
+    icon: FaAward,
+    t: "Quality Service",
+    d: "High standards, practical expertise, and consistent support for every engagement."
+  },
+  {
+    icon: FaClock,
+    t: "Flexible Engagement",
+    d: "Choose hourly, part-time, or full-time support based on your requirements."
+  },
+  {
+    icon: FaLock,
+    t: "100% Confidential",
+    d: "Your information, projects, and discussions remain private and secure."
+  },
+  {
+    icon: FaThumbsUp,
+    t: "Client Satisfaction",
+    d: "Focused on delivering value, measurable outcomes, and long-term success."
+  }
+];
+
+export  const fadeUp = {
+  hidden: {
+    opacity: 0,
+    y: 50
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7
+    }
+  }
+};
+
+export  const stagger = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.12
+    }
+  }
+};

@@ -38,26 +38,8 @@
   margin-bottom: 16px;
 }
 
-.logo-box {
-  width: 44px;
-  height: 44px;
-  background: #2563EB;
-  color: #ffffff;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 15px;
-  font-weight: 700;
-  flex-shrink: 0;
-  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.4);
-}
-
-.logo-text {
-  font-size: 20px;
-  font-weight: 700;
-  color: #ffffff;
-  letter-spacing: -0.3px;
+.footer-logo img {
+  height: 100px;
 }
 
 .footer-tagline {
@@ -276,9 +258,11 @@
     grid-template-columns: 1fr 1fr;
     gap: 36px;
   }
+
   .footer-col--brand {
     grid-column: 1 / -1;
   }
+
   .footer-tagline {
     max-width: 100%;
   }
@@ -288,20 +272,25 @@
   .footer {
     padding: 50px 5% 28px;
   }
+
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 28px;
   }
+
   .footer-col--brand {
     grid-column: auto;
   }
+
   .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
   }
+
   .logo-text {
     font-size: 18px;
   }
+
   .footer-links {
     gap: 14px;
   }
